@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Invoice Generator</title>
+</head>
+<body>
+
+<h2>Create Invoice</h2>
+
+<form id="invoiceForm">
+  <input id="invoiceNumber" placeholder="Invoice Number" required><br><br>
+  <input id="invoiceDate" type="date" required><br><br>
+
+  <textarea id="billTo" placeholder="Bill To" rows="4" required></textarea><br><br>
+
+  <table border="1" width="100%">
+    <thead>
+      <tr>
+        <th>Delivery Date</th>
+        <th>Order No</th>
+        <th>Destination</th>
+        <th>Veh No</th>
+        <th>Base Rate</th>
+        <th>Extra Charge</th>
+        <th>Total</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody id="rows"></tbody>
+  </table>
+
+  <br>
+  <button type="button" onclick="addRow()">+ Add Row</button>
+  <h3>Total: RM <span id="grandTotal">0.00</span></h3>
+
+  <button type="submit">Generate PDF</button>
+</form>
+
+<script src="script.js"></script>
+</body>
+</html>
